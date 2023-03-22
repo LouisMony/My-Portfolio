@@ -1,0 +1,49 @@
+@import './index.scss';
+
+//FONT
+
+* {
+  box-sizing: border-box;
+  font-family: 'Helvetica';
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background-color: $bg_black;
+  color: $white;
+}
+
+.Home {
+  margin: 0 auto;
+  width: 100%;
+  height: 100%;
+
+    &__row {
+        display: flex;
+        justify-content: center;
+        height: 100vh;
+        align-items: center;
+
+        &__imagecontainer {
+            .thumbnail {
+                overflow: hidden;
+                .frame {
+                  height: 100%;
+                  display: flex;
+                  justify-content: center;
+                    img {
+                        width: auto;
+                        height: 100%;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+//single
+
+
+
+

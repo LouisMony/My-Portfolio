@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "SaintMonicaR";   /*Can be any text*/
+  src: local('SaintMonicaR'), url("./font/SaintMonica.woff") format("woff");
+}
+
+*{
+  font-family: 'Helvetica';
+}
+
+.MonicaFont{
+  font-family: 'SaintMonicaR'!important;
+  text-transform: uppercase;
+}
+
+.Hover_mouse:hover{
+  #js_cursor{
+    width: 100px;
+  }
+}
+
+$bg_black : #121212;
+$bg_beige : #FFFDF6;
+$white: white;
+$font_grey: #B4B4B4;
+$main_red: #C72222;
+
+$max_mobile: 600px;
+$min_tablette: 601px;
+$max_tablette: 1000px;
+
+@keyframes opacity_pop {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+p,h1,h2,h3,h3{
+  margin:0;
+  font-weight: 400;
+}
+
+p{
+  @media screen and (max-width: $max_mobile) {
+    font-size: 14px;
+}
+}

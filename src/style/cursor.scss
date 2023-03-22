@@ -1,0 +1,26 @@
+@import '../index.scss';
+
+#js_cursor{
+    border: solid 1px $font_grey;
+    width: 50px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 998;
+    transition: width 200ms ease-out;
+}
+
+#js_cursor_center{
+    background-color: $white;
+    width: 4px;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    z-index: 998;
+}

@@ -1,0 +1,149 @@
+@import '../index.scss';
+
+@keyframes load_height {
+    from {
+        height: 0%;
+        opacity: 0;
+    }
+    to {
+        height: 100%;
+        opacity: 1
+    }
+}
+
+.MainBloc{
+    background-color: $bg_black;
+    width: 100vw;
+    height: 100vh;
+    color: $white;
+    
+    &::after{
+        content: '';
+        position: absolute;
+        height: 0%;
+        width: 1px;
+        background-color: $white;
+        left: 50px;
+        top: 0px;
+        animation: load_height 1s forwards;
+        animation-delay: 1s;
+
+        @media screen and (max-width: $max_mobile) {
+            display: none;
+        }
+    }
+
+    &__container{
+        opacity: 0;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+        height: 82%;
+        animation: opacity_pop 1.5s forwards;
+        animation-delay: 2.5s;
+
+        @media screen and (max-width: $max_mobile) {
+            flex-direction: column-reverse;
+            gap: 15px;
+            width: calc(100% - 50px);
+            margin: auto;
+        }
+
+        &__left, &__right{
+            width: calc(50% - 25px);
+            @media screen and (max-width: $max_mobile) {
+                width: 100%;
+            }
+        }
+
+        &__left{
+            z-index: 5;
+            position: relative;
+
+            img{
+                position: absolute;
+                left: 10%;
+                top: 200px;
+                width: 100%;
+                filter: drop-shadow(-20px 20px 67px rgba(0, 0, 0, 0.4));
+
+                @media screen and (max-width: $max_mobile) {
+                    margin-top: 50px;
+                    position: initial;
+                }
+                
+            }
+        }
+
+        &__right{
+            z-index: 10;
+            padding-top: 100px;
+            box-sizing: border-box;
+            padding-right: 50px;
+
+            @media screen and (max-width: $max_mobile) {
+                padding-top: 50px;
+                padding-right: 0px;
+                text-align: center;
+            }
+            
+
+            h3{
+                font-size: 24px;
+                font-weight: bold;
+                text-transform: uppercase;
+                
+            }
+
+            p{
+                color: $font_grey;
+                text-align: justify;
+            }
+        }
+
+    }
+}
+
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+.MainBlocSecond{
+    background-color: $bg_beige;
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+
+    &::before{
+        content: '';
+        position: absolute;
+        height: 0%;
+        width: 1px;
+        background-color: $bg_black;
+        left: 50px;
+        top: 0px;
+        animation: load_height 1s forwards;
+        animation-delay: 1s;
+
+        @media screen and (max-width: $max_mobile) {
+            display: none;
+        }
+    }
+
+    &__container{
+        position: absolute;
+        white-space: nowrap;
+        
+        &__marquee{
+            font-size: 90px;
+            line-height: 115px;
+            z-index: 2;
+
+            @media screen and (max-width: $max_mobile) {
+                font-size: 40px;
+                line-height: 50px;
+            }
+        }
+    }
+}
