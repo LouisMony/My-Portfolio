@@ -12,7 +12,7 @@ const project_arr = [
       title: "Aides",
       type: "Professionnal Project",
       link: "/project/aides",
-      banner: "/media/aides_visual.png",
+      banner: "/media/aides_visual.webp",
       bannercomp: "/media/compressed/aides_visual_compressed.png"
     },
     {

@@ -39,6 +39,9 @@ body {
               &__right{
                 color: $font-grey;
               }
+              @media screen and (max-width: $max_mobile) {
+                font-size: 14px;
+              }
             }
             .thumbnail {
                 overflow: hidden;
@@ -85,31 +88,19 @@ body {
   align-items: center;
   justify-content: space-between;
 
-  &::after{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      height: 1px;
-      background-color: $white;
-      width: 0%;
-      animation: load_bar 1s forwards;
-      animation-delay: 1s;
-  }
-
   button{
     opacity: 0;
     background-color: transparent;
     color: $font-grey;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 12px;
     border: none;
     outline: none;
     cursor: pointer;
     z-index: 989;
     transition: all 200ms ease-in-out;
     animation: load_button 1s forwards;
-    animation-delay: 1.5s;
+    animation-delay: 1s;
 
     &:hover{
       color: $white;

@@ -45,11 +45,6 @@ p,h1,h2,h3,h3{
   font-weight: 400;
 }
 
-p{
-  @media screen and (max-width: $max_mobile) {
-    font-size: 14px;
-}
-}
 
 @keyframes load_bar {
   from {

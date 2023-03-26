@@ -10,6 +10,9 @@
         padding: 50px;
         box-sizing: border-box;
 
+        @media screen and (max-width: $max_mobile) {
+            padding: 25px;
+        }
         ul{
             list-style-type: none;
             margin: 0;
@@ -20,6 +23,10 @@
             li{
                 font-size: clamp(16px, 4vw, 200px);
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+
+                @media screen and (max-width: $max_mobile) {
+                    font-size: 30px;
+                  }
 
                 a{
                     color: $font_grey;

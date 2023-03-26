@@ -1,3 +1,5 @@
+@import '../index.scss';
+
 .menu {
   z-index: 999;
     background-color: transparent;
@@ -6,9 +8,14 @@
     display: flex;
     padding: 0;
     position: fixed;
-    top: 0;
-    right: 0;
+    top: 0px;
+    right: 0px;
     transform: scale(0.4);
+
+    @media screen and (max-width: $max_mobile) {
+      top: -20px;
+      right: -20px;
+    }
   }
   .line {
     fill: none;

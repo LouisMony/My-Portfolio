@@ -45,14 +45,28 @@ function App() {
                 exact
                 path='/project/events'
                 render={() => <Project dimension={imageDetails} title="Events" job="WEB DESIGN / UX & UI / FRONT DEVELOPEMENT / BACK DEVELOPEMENT"
-                stack="Vuejs / Airtable" time="November 2022 - Marsh 2023" type="School project" banner="/media/elesh_visual.webp"
+                stack="Vuejs / Airtable" time="November 2022 - Marsh 2023" type="School project" banner="/media/elesh_visual.webp" endCTA="Discover Event" endLink="#" introText='Welcome to the "Event" application designed to simplify the planning of events in board and card game stores, you can say goodbye to paper lists and disorganization.  Event allows store managers to manage and plan their events with ease while allowing their customers to register directly via their cell phone, to register in the queue, to cancel etc...' firstVisual="/media/content/Event_MockUp.webp"
                 />}
               />
                <Route
                 exact
                 path='/project/music'
                 render={() => <Project dimension={imageDetails} title="Music" job="Music Production / Sound Design"
-                stack="Fl Studio" time="September 2017" type="Personnal & professionnal project" banner="/media/music_visual.webp"
+                stack="Fl Studio" time="September 2017" type="Personnal & professionnal project" banner="/media/music_visual.webp" endCTA="Listen to my music" endLink="https://soundcloud.com/user-937117132"
+                />}
+              />
+              <Route
+                exact
+                path='/project/aides'
+                render={() => <Project dimension={imageDetails} title="Aides" job="FRONT DEVELOPEMENT"
+                stack="VueJs/AstroJs" time="OCTOBER 2022 - NOVEMBER 2022" type="Professionnal project" banner="/media/aides_visual.webp" endCTA="Visit Website" endLink="https://don.aides.org/"
+                />}
+              />
+              <Route
+                exact
+                path='/project/kia-osb'
+                render={() => <Project dimension={imageDetails} title="Kia Osb" job="FRONT & Back DEVELOPEMENT"
+                stack="VueJs/AstroJs" time="December 2022 - April 2023" type="Professionnal project" banner="/media/kia_visual.webp" endCTA="Visit Website" endLink="https://www.kia.com/fr/service/osb/"
                 />}
               />
             </Switch>

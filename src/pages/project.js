@@ -85,12 +85,14 @@ export default class Project extends React.Component {
         </div>
         <div className='Project__next' >
             <p className="Project__next__p">
-              Welcome to the "Event" application designed to simplify the planning of events in board and card game stores, you can say goodbye to paper lists and disorganization.  Event allows store managers to manage and plan their events with ease while allowing their customers to register directly via their cell phone, to register in the queue, to cancel etc...
+              {this.props.introText}
             </p>
-            <img className="Project__next__img" src={require("../media/event_visual.png")} alt='Visual' />
+            <img className="Project__next__img" src={this.props.firstVisual} alt='Visual' />
         </div>
         <div className='Project__footer' >
-          <span>Visit Events</span>
+          <a target="_blank" href={this.props.endLink}>
+            <span>{this.props.endCTA}</span>
+          </a>
         </div>
       </motion.div>
     );
