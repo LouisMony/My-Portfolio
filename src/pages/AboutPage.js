@@ -12,6 +12,7 @@ import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type';
 import MenuJs from '../js/MenuAnimation';
+import initAnimationCursor from '../js/CursorAnimation';
 import '../style/About.scss';
 
 export default class About extends React.Component {
@@ -20,7 +21,10 @@ export default class About extends React.Component {
       this.state = {}
     }
     
-    componentDidMount(){this.InitAnimation()}
+    componentDidMount(){
+        this.InitAnimation()
+        initAnimationCursor()
+    }
 
     InitAnimation(){
         //PARALLAX PHOTO & TEXT
@@ -106,10 +110,6 @@ export default class About extends React.Component {
     render() {
       return(
         <div className='About'> 
-          <Menu/>
-          <div onClick={MenuJs}>
-            <Menu_icon />
-          </div>
 
           <HeaderProject title="About me"/>
 
@@ -130,43 +130,43 @@ export default class About extends React.Component {
                     <h1 id='js_gsap_skills' className='About__main__skills__h1'>Skills</h1>
                     <div className='About__main__skills__list'>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/html.png' />
+                            <img src='/media/IconsSkills/html.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/css.png' />
+                            <img src='/media/IconsSkills/css.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/js.png' />
+                            <img src='/media/IconsSkills/js.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/react.png' />
+                            <img src='/media/IconsSkills/react.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/vue.png' />
+                            <img src='/media/IconsSkills/vue.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/svelte.png' />
+                            <img src='/media/IconsSkills/svelte.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/gsap.png' />
+                            <img src='/media/IconsSkills/gsap.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/strapi.png' />
+                            <img src='/media/IconsSkills/strapi.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/directus.png' />
+                            <img src='/media/IconsSkills/directus.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/figma.png' />
+                            <img src='/media/IconsSkills/figma.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/xd.png' />
+                            <img src='/media/IconsSkills/xd.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/html.png' />
+                            <img src='/media/IconsSkills/html.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='./img/IconsSkills/css.png' />
+                            <img src='/media/IconsSkills/css.png' />
                         </div>
                     </div>
                     <p className='About__main__skills__p js_pop'>

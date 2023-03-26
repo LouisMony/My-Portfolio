@@ -39,12 +39,12 @@ export default class Project extends React.Component {
       opacity: 1,
     })
 
-    gsap.fromTo(".Project__next__img",{scale: 0},{
+    gsap.fromTo(".Project__next__img",{opacity: 0},{
       scrollTrigger:{
           trigger: '.Project__next__img',
           start: 'top 80%',
       },
-      scale: 1,
+      opacity: 1,
       duration: 1
     })
   }
@@ -88,6 +88,9 @@ export default class Project extends React.Component {
               {this.props.introText}
             </p>
             <img className="Project__next__img" src={this.props.firstVisual} alt='Visual' />
+            <p className="Project__next__p">
+              {this.props.secondText}
+            </p>
         </div>
         <div className='Project__footer' >
           <a target="_blank" href={this.props.endLink}>

@@ -49,7 +49,7 @@ export default class Home extends React.Component {
     project_head.classList.add('opacitynone')
     project_visu.classList.add('scalenone')
 
-    await this.sleep(1300);
+    await this.sleep(1000);
     if(bool === false){
       this.setState((prevState) => {
         let nextid = prevState.activeid - 1;
