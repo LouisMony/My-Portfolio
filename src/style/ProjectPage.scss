@@ -80,7 +80,7 @@
       align-items: center;
       justify-content: center;
       border-top: solid 1px $white;
-      transition: all 500ms ease-in-out;
+      transition: all 800ms cubic-bezier(0.55,-0.01, 0.13, 0.99);
       text-transform: uppercase;
       box-shadow: inset 0px 0px $white;
       transform-origin: right;

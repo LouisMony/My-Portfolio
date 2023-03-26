@@ -24,7 +24,7 @@
                 a{
                     color: $font_grey;
                     text-decoration: none;
-                    transition: all 200ms ease-out;
+                    transition: all 500ms ease-in-out;
 
                     &:hover{
                         color: $white;

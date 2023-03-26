@@ -10,6 +10,7 @@ import HeaderProject from '../components/headerProject';
 import gsap from 'gsap';
 
 import MenuJs from '../js/MenuAnimation';
+import initAnimationCursor from '../js/CursorAnimation';
 import '../style/Contact.scss';
 
 export default class Contact extends React.Component {
@@ -18,7 +19,10 @@ export default class Contact extends React.Component {
       this.state = {}
     }
     
-    componentDidMount(){this.InitAnimation()}
+    componentDidMount(){
+      this.InitAnimation() 
+      initAnimationCursor()
+    }
 
     InitAnimation(){
         gsap.fromTo(".link", {
@@ -26,7 +30,7 @@ export default class Contact extends React.Component {
           }, 
           {
             y:0,
-            duration:0.5, 
+            duration:1, 
             delay: 1.5,
             stagger:{
               each: 0.1,
@@ -38,10 +42,6 @@ export default class Contact extends React.Component {
     render() {
       return(
         <div className='Contact'> 
-          <Menu/>
-          <div onClick={MenuJs}>
-            <Menu_icon />
-          </div>
 
           <HeaderProject title="Contact"/>
 
@@ -49,28 +49,27 @@ export default class Contact extends React.Component {
             <ul className='Contact__main__list'>
                 <li className='Contact__main__list__item'>
                     <p className='link'>
-                        
-                        <a href='#' target="_blank">Louis.mony2@gmail.com</a>
+                        <a href='#' className='link_cursor_type2' target="_blank">Louis.mony2@gmail.com</a>
                     </p>
                 </li>
                 <li className='Contact__main__list__item'>
                     <p className='link'>
-                        <a href='https://fr.linkedin.com/in/louis-mony-2505331a2' target="_blank">Linkedin</a>
+                        <a href='https://fr.linkedin.com/in/louis-mony-2505331a2' className='link_cursor_type2' target="_blank">Linkedin</a>
                     </p>
                 </li>
                 <li className='Contact__main__list__item'>
                     <p className='link'>
-                        <a href='https://github.com/LouisMony' target="_blank">GitHub</a>
+                        <a href='https://github.com/LouisMony' className='link_cursor_type2' target="_blank">GitHub</a>
                     </p>
                 </li>
                 <li className='Contact__main__list__item'>
                     <p className='link'>
-                        <a href='https://soundcloud.com/user-937117132' target="_blank">SoundCloud</a>
+                        <a href='https://soundcloud.com/user-937117132' className='link_cursor_type2' target="_blank">SoundCloud</a>
                     </p>
                 </li>
                 <li className='Contact__main__list__item'>
                     <p className='link'>
-                        <a href='https://www.instagram.com/louis__mony/' target="_blank">Instagram</a>
+                        <a href='https://www.instagram.com/louis__mony/' className='link_cursor_type2' target="_blank">Instagram</a>
                     </p>
                 </li>
             </ul>

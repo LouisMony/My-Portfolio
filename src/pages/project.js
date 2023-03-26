@@ -6,6 +6,7 @@ import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import HeaderProject from '../components/headerProject'
 import '../style/ProjectPage.scss';
+import initAnimationCursor from '../js/CursorAnimation';
 
 
 //Ease
@@ -20,6 +21,7 @@ export default class Project extends React.Component {
   componentDidMount(){
     //document.querySelector('body').style.overflowY = 'hidden'
     this.initAnimation()
+    initAnimationCursor()
   }
 
   initAnimation(){

@@ -1,27 +1,147 @@
-import * as React from "react";
+import React, { useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
+import project_arr from "../js/projectarr.js";
+import initAnimationCursor from '../js/CursorAnimation';
+import ProgressiveImage from 'react-progressive-image';
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
+const transition2 = { duration: 1.5 };
 
-const Home = ({ imageDetails, image }) => (
-  <>
-    <div className='Home'>
+export default class Home extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      activeid: 0,
+      title: "",
+      type: "",
+      link: "",
+      banner: ""
+    };
+    this.SwitchSlide = this.SwitchSlide.bind(this);
+  }
+  
+  componentDidMount(){
+    initAnimationCursor()
 
-      <div className='Home__row'>
-        <div className='Home__row__imagecontainer'>
-          <div className='thumbnail' ref={image} style={{width: imageDetails.width,height: imageDetails.height,}}>
-            <div className='frame'>
-              <Link to={`/project/events`}>
-                <motion.img src={require("../media/elesh_visual.png")} alt='Image' whileHover={{ scale: 1.1 }} transition={transition}/>
-              </Link>
-            </div>
-          </div>
+    this.setState({
+      title: project_arr[this.state.activeid].title,
+      type: project_arr[this.state.activeid].type,
+      link: project_arr[this.state.activeid].link,
+      banner: project_arr[this.state.activeid].banner
+    })
+  }
+
+  componentWillUnmount() {
+    // Code à exécuter lorsque le composant est démonté
+    console.log('Le composant Home a été démonté.');
+  }
+
+  sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  async SwitchSlide(bool) {
+    
+    const project_head = document.querySelector('.js_project_head')
+    const project_visu = document.querySelector('.js_project_visu')
+
+    project_head.classList.add('opacitynone')
+    project_visu.classList.add('scalenone')
+
+    await this.sleep(1300);
+    if(bool === false){
+      this.setState((prevState) => {
+        let nextid = prevState.activeid - 1;
+        if (nextid < 0 ) {
+          nextid = project_arr.length - 1;
+        }
+        return {
+          activeid: nextid,
+          title: project_arr[nextid].title,
+          type: project_arr[nextid].type,
+          link: project_arr[nextid].link,
+          banner: project_arr[nextid].banner,
+          bannercomp: project_arr[nextid].bannercomp,
+        };
+      });
+    }
+    if(bool === true){
+      this.setState((prevState) => {
+        let nextid = prevState.activeid + 1;
+        if (nextid >= project_arr.length) {
+          nextid = 0;
+        }
+        return {
+          activeid: nextid,
+          title: project_arr[nextid].title,
+          type: project_arr[nextid].type,
+          link: project_arr[nextid].link,
+          banner: project_arr[nextid].banner,
+          bannercomp: project_arr[nextid].bannercomp,
+        };
+      });
+    }
+    
+    project_head.classList.remove('opacitynone')
+    project_visu.classList.remove('scalenone')
+  }
+
+  render() {
+    const { imageDetails, image } = this.props;
+
+    return (
+      <>
+        <div className="Home">
+          
+          <motion.section initial={{opacity: 0}} animate={{opacity: 1}} transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }} className="Home__row">
+            <AnimatePresence>
+              <div className="Home__row__imagecontainer">
+                <motion.div
+                  exit={{ opacity: 0, height: "0px"}}
+                  transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
+                  className="Home__row__imagecontainer__title js_project_head"
+                >
+                  <div className="Home__row__imagecontainer__title__left">
+                    {this.state.title}
+                  </div>
+                  <div className="Home__row__imagecontainer__title__right">
+                    {this.state.type}
+                  </div>
+                </motion.div>
+                <div
+                  className="thumbnail js_project_visu link_cursor"
+                  ref={image}
+                  style={{ width: imageDetails.width, height: imageDetails.height }}
+                >
+                  <div className="frame">
+                    <Link to={this.state.link}>
+                      <ProgressiveImage
+                        src={this.state.banner}
+                        placeholder={this.state.bannercomp}>
+                        {(src) => (
+                          <motion.img
+                            src={src}
+                            alt='Image'
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
+                          />
+                        )}
+                      </ProgressiveImage>
+                      
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </AnimatePresence>
+            <motion.div exit={{ opacity: 0 }}></motion.div>
+          </motion.section>
         </div>
-        <motion.div exit={{ opacity: 0 }}></motion.div>
-      </div>
-    </div>
-  </>
-);
-
-export default Home;
+        <motion.div exit={{opacity:0}} transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }} className='Home_bottom'>
+          <button className='Home_bottom__left link_cursor_type2' onClick={() => this.SwitchSlide(false)}>Previous project</button>
+          <button className='Home_bottom__right link_cursor_type2' onClick={() => this.SwitchSlide(true)}>Next project</button>
+        </motion.div>
+      </>
+    );
+  }
+}

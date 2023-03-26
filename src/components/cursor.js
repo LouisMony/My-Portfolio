@@ -1,6 +1,8 @@
 import React from 'react';
 import {Component} from 'react'
 import '../style/cursor.scss';
+import gsap from 'gsap';
+
 
 export default class Cursor extends React.Component {
     constructor(props) {
@@ -10,24 +12,26 @@ export default class Cursor extends React.Component {
     
     componentDidMount(){
         this.InitCursor()
+        
     }
 
     InitCursor(){
-      const cursor = document.getElementById('js_cursor')
-      const cursorcenter = document.getElementById('js_cursor_center')
-      document.addEventListener('mousemove', e=>{
-        cursor.style.top = e.pageY + "px"
-        cursor.style.left = e.pageX + "px"
-        cursorcenter.style.top = e.pageY + "px"
-        cursorcenter.style.left = e.pageX + "px"
-      })
+      gsap.set(".cursor", {xPercent: -50, yPercent: -50});
+
+      let xTo = gsap.quickTo(".cursor", "x", {duration: 0.6, ease: "power3"}),
+          yTo = gsap.quickTo(".cursor", "y", {duration: 0.6, ease: "power3"});
+
+      window.addEventListener("mousemove", e => {
+        xTo(e.pageX);
+        yTo(e.pageY);
+      });
     }
     
     render() {
       return(
         <div>
-          <div id='js_cursor'></div>
-          <div id='js_cursor_center'></div>
+            <div className="cursor"></div>
+            
         </div>
       ) ;
     }
