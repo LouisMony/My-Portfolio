@@ -21,7 +21,7 @@
             flex-direction: column;
             gap: 30px;
             li{
-                font-size: clamp(16px, 4vw, 200px);
+                font-size: clamp(16px, 7vh, 200px);
                 clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
                 @media screen and (max-width: $max_mobile) {

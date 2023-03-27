@@ -3,13 +3,22 @@
   src: local('SaintMonicaR'), url("./font/SaintMonica.woff") format("woff");
 }
 
+@font-face {
+  font-family: "FounderGrostesk";
+  src: local('FounderGrostesk') url("/font/FoundersGroteskMedium.woff") format("woff");
+}
+
 *{
-  font-family: 'Helvetica';
+  font-family: Helvetica;
 }
 
 .MonicaFont{
   font-family: 'SaintMonicaR'!important;
   text-transform: uppercase;
+}
+
+.FounderFont{
+  font-family: "FounderGrostesk"!important;
 }
 
 .Hover_mouse:hover{

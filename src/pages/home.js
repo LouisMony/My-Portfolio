@@ -98,14 +98,6 @@ export default class Home extends React.Component {
           <motion.section initial={{opacity: 0}} animate={{opacity: 1}} transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }} className="Home__row">
             <AnimatePresence>
               <div className="Home__row__imagecontainer">
-                <div className="Home__row__imagecontainer__title js_project_head">
-                  <div className="Home__row__imagecontainer__title__left">
-                    {this.state.title}
-                  </div>
-                  <div className="Home__row__imagecontainer__title__right">
-                    {this.state.type}
-                  </div>
-                </div>
                 <div
                   className="thumbnail js_project_visu link_cursor"
                   ref={image}
@@ -136,6 +128,7 @@ export default class Home extends React.Component {
         </div>
         <motion.div exit={{opacity:0}} transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }} className='Home_bottom'>
           <button className='Home_bottom__left link_cursor_type2' onClick={() => this.SwitchSlide(false)}>Previous project</button>
+          <p className='js_project_head MonicaFont'>{this.state.title}</p>
           <button className='Home_bottom__right link_cursor_type2' onClick={() => this.SwitchSlide(true)}>Next project</button>
         </motion.div>
       </div>

@@ -29,7 +29,7 @@ export default class HeaderProject extends React.Component {
       return(
         <div className='header'>
             <div className='header__left'>
-                <h1 id='js_gsap_title' className='js_h1'>{this.props.title}</h1>
+                <h1 id='js_gsap_title' className='js_h1 FounderFont'>{this.props.title}</h1>
             </div>
         </div>
       ) ;

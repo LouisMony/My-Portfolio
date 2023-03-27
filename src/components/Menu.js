@@ -38,7 +38,7 @@ export default class Menu extends React.Component {
             <Link to='/' className='Menu__item' onClick={this.MenuJsToggleIcon} >
                 <div className='Menu__item__left link_cursor'>
                     <span className='Menu__item__left__number'>01</span>
-                    <span className='Menu__item__left__title'>PROJECTS</span>
+                    <span className='Menu__item__left__title'>HOME</span>
                 </div>
                 <div className='Menu__item__right'>
                     <span className='Menu__item__left__link'>Go here</span>
