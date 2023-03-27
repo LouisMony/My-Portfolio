@@ -1,15 +1,15 @@
 @font-face {
   font-family: "SaintMonicaR";   /*Can be any text*/
-  src: local('SaintMonicaR'), url("./font/SaintMonica.woff") format("woff");
+  src: local('SaintMonicaR'), url("./font/SaintMonica/SaintMonica.woff") format("woff");
 }
 
 @font-face {
-  font-family: "FounderGrostesk";
-  src: local('FounderGrostesk') url("/font/FoundersGroteskMedium.woff") format("woff");
+  font-family: FounderGrostesk;
+  src: url(./font/Founders_Grotesk/woff/FoundersGrotesk-Regular.woff) format("woff");
 }
 
 *{
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif
 }
 
 .MonicaFont{
@@ -17,8 +17,8 @@
   text-transform: uppercase;
 }
 
-.FounderFont{
-  font-family: "FounderGrostesk"!important;
+.Founders{
+  font-family: FounderGrostesk!important;
 }
 
 .Hover_mouse:hover{
@@ -47,6 +47,8 @@ body {
   padding: 0;
   box-sizing: border-box;
   overflow-x: hidden;
+  background-color: $bg_black;
+  color: $white;
 }
 
 p,h1,h2,h3,h3{

@@ -45,6 +45,7 @@ export default class Home extends React.Component {
     const project_visu = document.querySelector('.js_project_visu')
 
     project_head.classList.add('opacitynone')
+    //project_head.style.opacity = 0
     project_visu.classList.add('scalenone')
 
     await this.sleep(1000);
@@ -81,6 +82,7 @@ export default class Home extends React.Component {
       });
     }
     
+    //project_head.style.opacity = 1
     project_head.classList.remove('opacitynone')
     project_visu.classList.remove('scalenone')
   }
@@ -128,7 +130,7 @@ export default class Home extends React.Component {
         </div>
         <motion.div exit={{opacity:0}} transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }} className='Home_bottom'>
           <button className='Home_bottom__left link_cursor_type2' onClick={() => this.SwitchSlide(false)}>Previous project</button>
-          <p className='js_project_head MonicaFont'>{this.state.title}</p>
+          <motion.p initial={{opacity:0}} animate={{opacity: 1}} className='js_project_head MonicaFont'>{this.state.title}</motion.p>
           <button className='Home_bottom__right link_cursor_type2' onClick={() => this.SwitchSlide(true)}>Next project</button>
         </motion.div>
       </div>

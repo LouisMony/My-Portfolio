@@ -114,6 +114,9 @@
                     img{
                         height: 50%;
                     }
+                    @media screen and (max-width: $max_tablette) {
+                        height: 100px;
+                    }
                 }
             }
             p{

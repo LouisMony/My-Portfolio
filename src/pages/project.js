@@ -56,7 +56,7 @@ export default class Project extends React.Component {
         <div className='Project__container' >
           <div className='Project__container__top'>
             <HeaderProject title={this.props.title}/>
-            <motion.div className="Project__container__top__info" 
+            <motion.div className="Project__container__top__info Founders" 
             initial={{opacity:0}}
             animate={{opacity:1, transition: { delay: 1, ...transition },}}>
               <p>{this.props.job}<br/>

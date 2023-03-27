@@ -37,7 +37,12 @@
           color: $font_grey;
           font-size: 24px;
           padding: 50px;
+          //font-family: FounderGrostesk!important;
 
+          @media screen and (max-width: $max_tablette) {
+            padding: 25px;
+            font-size: 24px;
+          }
           @media screen and (max-width: $max_mobile) {
             font-size: 16px;
             padding: 25px;
@@ -56,11 +61,12 @@
         font-size: 36px;
         width: calc(100% - 300px);
         text-align: center;
+        //font-family: FounderGrostesk!important;
 
-        @media screen and (max-width: $max_mobile) {
+        @media screen and (max-width: $max_tablette) {
           margin: 150px 0 100px;
-           width: calc(100% - 50px);
-           font-size: 24px;
+          width: calc(100% - 50px);
+          font-size: 24px;
         }
       }
 
