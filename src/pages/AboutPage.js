@@ -1,18 +1,14 @@
 import React from 'react';
-import {Component} from 'react'
+//import {Component} from 'react'
 import { Link } from 'react-router-dom';
 
 //COMPONENTS
-import Menu from '../components/Menu';
-import Menu_icon from '../components/Menu_icon';
 import HeaderProject from '../components/headerProject';
 
 //JS & STYLE
 import gsap from 'gsap';
-import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SplitType from 'split-type';
-import MenuJs from '../js/MenuAnimation';
 import initAnimationCursor from '../js/CursorAnimation';
 import '../style/About.scss';
 
@@ -116,9 +112,9 @@ export default class About extends React.Component {
 
           <div className='About__main'>
                 <p className='About__main__p js_pop'>
-                    <div className='About__main__p__div' >Hello ! I am Louis, a junior front-end developer specializing in creating aesthetic and user-friendly websites. With my skills in different framework and in JavaScript, I can design dynamic and responsive user interfaces.<br/>
+                    <span className='About__main__p__div' >Hello ! I am Louis, a junior front-end developer specializing in creating aesthetic and user-friendly websites. With my skills in different framework and in JavaScript, I can design dynamic and responsive user interfaces.<br/>
                     Having worked on several projects, I have gained experience and developed my creativity. I am also an effective collaborator and good communicator.<br/>
-                    If you are looking for a talented front-end developer for your project, please feel free to contact me. I would be delighted to discuss your needs.</div>
+                    If you are looking for a talented front-end developer for your project, please feel free to contact me. I would be delighted to discuss your needs.</span>
                 </p>
 
                 <div className='About__main__photo js_pop'>
@@ -131,43 +127,43 @@ export default class About extends React.Component {
                     <h1 id='js_gsap_skills' className='About__main__skills__h1'>Skills</h1>
                     <div className='About__main__skills__list'>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/html.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/html.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/css.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/css.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/js.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/js.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/react.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/react.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/vue.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/vue.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/svelte.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/svelte.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/gsap.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/gsap.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/strapi.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/strapi.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/directus.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/directus.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/figma.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/figma.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/xd.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/xd.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/html.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/html.png' />
                         </div>
                         <div className='About__main__skills__list__item'>
-                            <img src='/media/IconsSkills/css.png' />
+                            <img alt='icon_stack' src='/media/IconsSkills/css.png' />
                         </div>
                     </div>
                     <p className='About__main__skills__p js_pop'>

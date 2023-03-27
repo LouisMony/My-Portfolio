@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component} from 'react'
+//import {Component} from 'react'
 import '../style/HomeLoader.scss';
 import CountUp from 'react-countup';
 

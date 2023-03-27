@@ -64,7 +64,7 @@ function App() {
                 exact
                 path='/project/kia-osb'
                 render={() => <Project dimension={imageDetails} title="Kia Osb" job="FRONT & Back DEVELOPEMENT"
-                stack="VueJs/AstroJs" time="December 2022 - April 2023" type="Professionnal project" banner="/media/kia_visual.webp" endCTA="Visit Website" endLink="https://www.kia.com/fr/service/osb/" firstVisual="/media/content/Kia_mockUp.webp"
+                stack="VueJs/AstroJs" time="December 2022 - April 2023" type="Professionnal project" banner="/media/kia_visual.webp" endCTA="Visit Website" endLink="https://www.kia.com/fr/service/osb/" firstVisual="/media/content/Kia_mockUp.webp" introText="Kia OSB (Online Service Booking) is an innovative tool for scheduling appointments at KIA dealerships. This solution allows KIA vehicle owners to easily plan the necessary technical operations, select their preferred dealership, and choose a time slot that suits them. This solution reflects a high level of technical expertise and a strong command of web development technologies." secondText="To realize this project, many technologies were needed. The project is developed on AstroJs with Vue components allowing a maximum fluidity. Many APIs are also used for the map, the calendar, the registrations etc.."
                 />}
               />
             </Switch>

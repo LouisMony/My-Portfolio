@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component} from 'react'
+//import {Component} from 'react'
 import '../style/cursor.scss';
 import gsap from 'gsap';
 
@@ -22,8 +22,8 @@ export default class Cursor extends React.Component {
           yTo = gsap.quickTo(".cursor", "y", {duration: 0.6, ease: "power3"});
 
       window.addEventListener("mousemove", e => {
-        xTo(e.pageX);
-        yTo(e.pageY);
+        xTo(e.clientX);
+        yTo(e.clientY);
       });
     }
     
@@ -31,7 +31,6 @@ export default class Cursor extends React.Component {
       return(
         <div>
             <div className="cursor"></div>
-            
         </div>
       ) ;
     }

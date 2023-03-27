@@ -1,13 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import project_arr from "../js/projectarr.js";
 import initAnimationCursor from '../js/CursorAnimation';
 import ProgressiveImage from 'react-progressive-image';
 import Loader from '../components/HomeLoader.js';
-
-const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
-const transition2 = { duration: 1.5 };
 
 export default class Home extends React.Component {
   constructor(props) {
@@ -101,18 +98,14 @@ export default class Home extends React.Component {
           <motion.section initial={{opacity: 0}} animate={{opacity: 1}} transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }} className="Home__row">
             <AnimatePresence>
               <div className="Home__row__imagecontainer">
-                <motion.div
-                  exit={{ opacity: 0, height: "0px"}}
-                  transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }}
-                  className="Home__row__imagecontainer__title js_project_head"
-                >
+                <div className="Home__row__imagecontainer__title js_project_head">
                   <div className="Home__row__imagecontainer__title__left">
                     {this.state.title}
                   </div>
                   <div className="Home__row__imagecontainer__title__right">
                     {this.state.type}
                   </div>
-                </motion.div>
+                </div>
                 <div
                   className="thumbnail js_project_visu link_cursor"
                   ref={image}

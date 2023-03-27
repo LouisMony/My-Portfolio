@@ -1,5 +1,5 @@
 import React from 'react';
-import {Component} from 'react'
+//import {Component} from 'react'
 import '../style/icon_menu.scss';
 import ToggleIcon from "../js/ToggleIcon.js"
 export default class Menu_icon extends React.Component {

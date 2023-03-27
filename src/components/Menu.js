@@ -1,10 +1,9 @@
 import React from 'react';
-import {Component} from 'react'
+//import {Component} from 'react'
 import { Link } from 'react-router-dom';
 import '../style/Menu.scss';
 import MenuJs from '../js/MenuAnimation';
 import ToggleIcon from "../js/ToggleIcon.js"
-import gsap from 'gsap';
 import initAnimationCursor from '../js/CursorAnimation';
 
 export default class Menu extends React.Component {

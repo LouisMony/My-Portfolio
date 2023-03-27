@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from "react";
-import {Component} from 'react'
-import { motion, useViewportScroll, useTransform } from "framer-motion";
+import React from "react";
+//import {Component} from 'react'
+import { motion } from "framer-motion";
 import gsap from "gsap";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -92,8 +92,8 @@ export default class Project extends React.Component {
               {this.props.secondText}
             </p>
         </div>
-        <div className='Project__footer' >
-          <a target="_blank" href={this.props.endLink}>
+        <div className='Project__footer link_cursor_type2' >
+          <a rel="noopener noreferrer" target="_blank" href={this.props.endLink}>
             <span>{this.props.endCTA}</span>
           </a>
         </div>
