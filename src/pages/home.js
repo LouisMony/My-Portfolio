@@ -89,7 +89,7 @@ export default class Home extends React.Component {
     const { imageDetails, image } = this.props;
 
     return (
-      <>
+      <div>
       <Loader/>
         <motion.div exit={{opacity:0}} transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }} className='Home_top'>
           ©2023 Louis Mony - All Rights Reserved
@@ -138,7 +138,7 @@ export default class Home extends React.Component {
           <button className='Home_bottom__left link_cursor_type2' onClick={() => this.SwitchSlide(false)}>Previous project</button>
           <button className='Home_bottom__right link_cursor_type2' onClick={() => this.SwitchSlide(true)}>Next project</button>
         </motion.div>
-      </>
+      </div>
     );
   }
 }
