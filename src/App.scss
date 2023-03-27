@@ -76,7 +76,19 @@ body {
         }
     }
 }
-
+.Home_top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding:25px;
+  color: $font-grey;
+  text-transform: uppercase;
+  font-size: 10px;
+  opacity: 0;
+  animation: load_button 1s forwards;
+  animation-delay: .7s;
+  cursor: default;
+}
 .Home_bottom{
   position: absolute;
   bottom: 0;

@@ -9,10 +9,12 @@
     "framer-motion": "^2.0.0-beta.77",
     "gsap": "^3.11.5",
     "react": "^16.13.1",
+    "react-countup": "^6.4.2",
     "react-dom": "^16.13.1",
     "react-progressive-image": "^0.6.0",
     "react-router-dom": "^5.2.0",
     "react-scripts": "3.4.1",
+    "react-spring": "^9.7.1",
     "sass": "^1.26.9",
     "split-type": "^0.3.3"
   },

@@ -15,6 +15,7 @@ import "./App.scss";
 import "./index.scss";
 //JS
 import MenuJs from './js/MenuAnimation';
+import ScrollToTop from "./js/scrollToTop";
 
 
 
@@ -26,6 +27,7 @@ function App() {
 
   return (
     <Router>
+      <ScrollToTop />
       <Cursor/>
       <div className="link_cursor" onClick={MenuJs}>
         <Menu_icon />

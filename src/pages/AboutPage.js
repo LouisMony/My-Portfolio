@@ -1,5 +1,6 @@
 import React from 'react';
 import {Component} from 'react'
+import { Link } from 'react-router-dom';
 
 //COMPONENTS
 import Menu from '../components/Menu';
@@ -175,7 +176,9 @@ export default class About extends React.Component {
                 </div>
           </div>
 
-          <div className='About__footer'></div>
+          <div className='About__footer'>
+            <Link className='About__footer__link' to='/'>See my works</Link>
+          </div>
         </div>
       ) ;
     }

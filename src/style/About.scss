@@ -132,8 +132,29 @@
     &__footer{
         margin-top: 100px;
         border-top: 1px solid $white;
-        height: 15vh;
+        height: 70px;
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: inset 0px 0px $white;
+        cursor: pointer;
+        transition: all 800ms cubic-bezier(0.55,-0.01, 0.13, 0.99);
+
+        &__link{
+            color: $white;
+            text-transform: uppercase;
+            text-decoration: none;
+            font-size: 16px;
+            transition: all 800ms cubic-bezier(0.55,-0.01, 0.13, 0.99);
+        }
+
+        &:hover{
+            box-shadow: inset 100vw 0px $white;
+            .About__footer__link{
+              color: $bg_black;
+            }
+          }
         
     }
 }

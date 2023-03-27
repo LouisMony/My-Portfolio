@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import project_arr from "../js/projectarr.js";
 import initAnimationCursor from '../js/CursorAnimation';
 import ProgressiveImage from 'react-progressive-image';
+import Loader from '../components/HomeLoader.js';
 
 const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 const transition2 = { duration: 1.5 };
@@ -92,8 +93,11 @@ export default class Home extends React.Component {
 
     return (
       <>
+      <Loader/>
+        <motion.div exit={{opacity:0}} transition={{ duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] }} className='Home_top'>
+          ©2023 Louis Mony - All Rights Reserved
+        </motion.div>
         <div className="Home">
-          
           <motion.section initial={{opacity: 0}} animate={{opacity: 1}} transition={{ duration: 1, ease: [0.43, 0.13, 0.23, 0.96] }} className="Home__row">
             <AnimatePresence>
               <div className="Home__row__imagecontainer">
