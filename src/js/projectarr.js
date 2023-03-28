@@ -30,6 +30,14 @@ const project_arr = [
       link: "/project/kia-osb",
       banner: "/media/kia_visual.webp",
       bannercomp: "/media/compressed/kia_visual_compressed.png"
+    },
+    {
+      id: 5,
+      title: "eqlips",
+      type: "Personnal Project",
+      link: "/project/eqlips-streaming",
+      banner: "/media/eqlips_visual.webp",
+      bannercomp: "/media/eqlips_visual.webp"
     }
   ]
 

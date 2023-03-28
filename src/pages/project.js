@@ -15,7 +15,10 @@ const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.9] };
 export default class Project extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {}
+    this.state = {
+      scaleban: parseFloat(this.props.scalebanner),
+      transformban: this.props.transformbannner+"%"
+    }
   }
   
   componentDidMount(){
@@ -76,7 +79,7 @@ export default class Project extends React.Component {
                   className='thumbnail-single'>
                   <motion.div className='frame-single' whileHover='hover' transition={transition}>
                     <motion.img src={this.props.banner} alt='an image' initial={{ scale: 1.1 }}
-                      animate={{scale: 2.3, y: '40%', transition: { delay: 0.2, ...transition }}}/>
+                      animate={{scale: this.state.scaleban, y: this.state.transformban, transition: { delay: 0.2, ...transition }}}/>
                   </motion.div>
                 </motion.div>
               </motion.div>
