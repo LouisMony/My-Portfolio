@@ -17,14 +17,32 @@ export default class Project extends React.Component {
     super(props);
     this.state = {
       scaleban: parseFloat(this.props.scalebanner),
-      transformban: this.props.transformbannner+"%"
+      transformban: this.props.transformbannner+"%",
+      video_is_playing: false
     }
   }
   
   componentDidMount(){
-    //document.querySelector('body').style.overflowY = 'hidden'
     this.initAnimation()
     initAnimationCursor()
+    this.LoadVideo()
+  }
+
+  LoadVideo(){
+    const video = document.getElementById('js_video')
+    let _this = this
+    video.addEventListener('click', function(){
+      if(_this.state.video_is_playing === false){
+        video.play()
+        video.parentNode.classList.add('playing')
+        _this.setState({video_is_playing: true})
+      }
+      else if(_this.state.video_is_playing === true){
+        video.pause()
+        video.parentNode.classList.remove('playing')
+        _this.setState({video_is_playing: false})
+      }
+    })
   }
 
   initAnimation(){
@@ -90,10 +108,12 @@ export default class Project extends React.Component {
             <p className="Project__next__p">
               {this.props.introText}
             </p>
-            <img className="Project__next__img" src={this.props.firstVisual} alt='Visual' />
-            <p className="Project__next__p">
-              {this.props.secondText}
-            </p>
+            {this.props.firstVisual  && <img className="Project__next__img" src={this.props.firstVisual} alt='Visual' />}
+            {this.props.video  && <div className="video_container"><video loop className="link_cursor" id="js_video" src='/media/video/music_for_hyundai.mp4' /></div>}
+            {this.props.secondText 
+              ? <p className="Project__next__p">{this.props.secondText}</p> 
+              : <div className="empty"></div>
+            }
         </div>
         <div className='Project__footer link_cursor_type2' >
           <a rel="noopener noreferrer" target="_blank" href={this.props.endLink}>

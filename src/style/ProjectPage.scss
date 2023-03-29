@@ -56,6 +56,42 @@
       flex-direction: column;
       align-items: center;
 
+      .empty{
+        height: 300px;
+
+        @media screen and (max-width: $max_tablette) {
+          height: 100px;
+        }
+      }
+
+      .video_container{
+        position: relative;
+        #js_video{
+          height: 600px;
+        }
+        &:before{
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: rgba(255,255,255,0.5);
+          clip-path: polygon(100% 50%, 0% 100%, 0 0);
+          backdrop-filter: blur(5px);
+          height: 50px;
+          width: 50px;
+          transition: all 100ms ease-in-out;
+        }
+      }
+
+      .playing{
+        &:before{
+          opacity: 0;
+        }
+
+      }
+      
+
       &__p{
         margin: 400px 0 400px;
         font-size: 36px;

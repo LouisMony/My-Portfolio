@@ -109,22 +109,25 @@
             }
         }
 
-        &:hover{
-            cursor: pointer;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-size: cover;
-            background-image: url('../media/bg.jpg');
-
-            .Menu__item__left{
-                color: $main_red;
-                &__number{
+        @media screen and (min-width: $max_tablette) {
+            &:hover{
+                cursor: pointer;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-image: url('../media/bg.jpg');
+    
+                .Menu__item__left{
                     color: $main_red;
+                    &__number{
+                        color: $main_red;
+                    }
+                }
+                .Menu__item__right{
+                    opacity: 1;
                 }
             }
-            .Menu__item__right{
-                opacity: 1;
-            }
         }
+        
     }
 }
