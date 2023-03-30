@@ -86,7 +86,7 @@ function App() {
                 exact
                 path='/project/eqlips-streaming'
                 render={() => <Project dimension={imageDetails} title="Eqlips" job="Webdsign / FRONT DEVELOPEMENT & API"
-                stack="Figma / HTML & SCSS / VanillaJS / Airtable" time="Mars 2022" type="Personnal project" banner="/media/eqlips_visual.webp" endCTA="Listen to our music" endLink="https://eqlips-steaming.netlify.app/" firstVisual="/media/content/eqlips_MockUP.webp" introText="Eqlips Streaming is a streaming platform dedicated to the producers' collective Eqlips. Each member can publish his tracks on the platform and listen to other producers' tracks for free. The aim of the project was to create a place for producers to share their music and to bring the collective to a wider audience." secondText="To realize this project, many technologies were needed. The project is developed on AstroJs with Vue components allowing a maximum fluidity. Many APIs are also used for the map, the calendar, the registrations etc.." scalebanner="1.7" transformbannner="0"
+                stack="Figma / HTML & SCSS / VanillaJS / Airtable" time="Mars 2022" type="Personnal project" banner="/media/eqlips_visual.webp" endCTA="Listen to our music" endLink="https://eqlips-steaming.netlify.app/" firstVisual="/media/content/eqlips_MockUP.webp" introText="Eqlips Streaming is a streaming platform dedicated to the producers' collective Eqlips. Each member can publish his tracks on the platform and listen to other producers' tracks for free. The aim of the project was to create a place for producers to share their music and to bring the collective to a wider audience." scalebanner="1.7" transformbannner="0"
                 />}
               />
           </AnimatePresence>
