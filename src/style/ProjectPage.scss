@@ -28,6 +28,7 @@
           }
         }
       }
+
       &__top{
         height: 50vh;
         position: relative;
@@ -36,7 +37,7 @@
           text-transform: uppercase;
           color: $font_grey;
           font-size: 24px;
-          padding: 50px;
+          padding: 25px 50px;
           //font-family: FounderGrostesk!important;
 
           @media screen and (max-width: $max_tablette) {
@@ -66,6 +67,8 @@
 
       .video_container{
         position: relative;
+        border: 1px solid transparent;
+        transition: all 300ms ease-in-out;
         #js_video{
           height: 600px;
         }
@@ -88,12 +91,11 @@
         &:before{
           opacity: 0;
         }
-
+        border: 1px solid $white;
       }
       
-
       &__p{
-        margin: 400px 0 400px;
+        margin: 200px 0 200px;
         font-size: 36px;
         width: calc(100% - 300px);
         text-align: center;

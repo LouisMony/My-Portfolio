@@ -30,19 +30,21 @@ export default class Project extends React.Component {
 
   LoadVideo(){
     const video = document.getElementById('js_video')
-    let _this = this
-    video.addEventListener('click', function(){
-      if(_this.state.video_is_playing === false){
-        video.play()
-        video.parentNode.classList.add('playing')
-        _this.setState({video_is_playing: true})
-      }
-      else if(_this.state.video_is_playing === true){
-        video.pause()
-        video.parentNode.classList.remove('playing')
-        _this.setState({video_is_playing: false})
-      }
-    })
+    if(video !== null){
+      let _this = this
+      video.addEventListener('click', function(){
+        if(_this.state.video_is_playing === false){
+          video.play()
+          video.parentNode.classList.add('playing')
+          _this.setState({video_is_playing: true})
+        }
+        else if(_this.state.video_is_playing === true){
+          video.pause()
+          video.parentNode.classList.remove('playing')
+          _this.setState({video_is_playing: false})
+        }
+      })
+    }
   }
 
   initAnimation(){
