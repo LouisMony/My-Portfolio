@@ -9,6 +9,14 @@ const project_arr = [
     },
     {
       id: 2,
+      title: "Supreme",
+      type: "Personnal Project",
+      link: "/project/supreme-rebranding",
+      banner: "/media/supreme_visual.webp",
+      bannercomp: "/media/compressed/aides_visual_compressed.png"
+    },
+    {
+      id: 3,
       title: "Aides",
       type: "Professionnal Project",
       link: "/project/aides",
@@ -16,7 +24,7 @@ const project_arr = [
       bannercomp: "/media/compressed/aides_visual_compressed.png"
     },
     {
-      id: 3,
+      id: 4,
       title: "music",
       type: "Personnal Project",
       link: "/project/music",
@@ -24,7 +32,7 @@ const project_arr = [
       bannercomp: "/media/compressed/music_visual_compressed.png"
     },
     {
-      id: 4,
+      id: 5,
       title: "kia osb",
       type: "Professionnal Project",
       link: "/project/kia-osb",
@@ -32,7 +40,7 @@ const project_arr = [
       bannercomp: "/media/compressed/kia_visual_compressed.png"
     },
     {
-      id: 5,
+      id: 6,
       title: "eqlips",
       type: "Personnal Project",
       link: "/project/eqlips-streaming",

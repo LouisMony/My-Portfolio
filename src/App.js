@@ -56,9 +56,16 @@ function App() {
               <Route exact path='/' render={() => <Home imageDetails={imageDetails} />}/>
               <Route
                 exact
+                path='/project/supreme-rebranding'
+                render={() => <Project dimension={imageDetails} title="Supreme" job="WEB DESIGN / UX & UI / FRONT DEVELOPEMENT"
+                stack="Reactjs" time="Avril 2023" type="Personnal project" banner="/media/supreme_visual.webp" endCTA="Visit Website" endLink="https://supreme-rebranding.netlify.app/" introText="This fictional website for the Supreme brand is a personal rebranding project. The objective was not to create a new e-commerce site for the brand but rather a second site more focused on the presentation of the brand's universe and the new collections and collaborations." firstVisual="/media/content/Supreme_MockUp.webp" scalebanner="2.3" transformbannner="-40"
+                />}
+              />
+              <Route
+                exact
                 path='/project/events'
                 render={() => <Project dimension={imageDetails} title="Events" job="WEB DESIGN / UX & UI / FRONT DEVELOPEMENT / BACK DEVELOPEMENT"
-                stack="Vuejs / Airtable" time="November 2022 - Marsh 2023" type="School project" banner="/media/elesh_visual.webp" endCTA="Discover Event" endLink="#" introText='Welcome to the "Event" application designed to simplify the planning of events in board and card game stores, you can say goodbye to paper lists and disorganization.  Event allows store managers to manage and plan their events with ease while allowing their customers to register directly via their cell phone, to register in the queue, to cancel etc...' firstVisual="/media/content/Event_MockUp.webp" scalebanner="2.3" transformbannner="40"
+                stack="Vuejs / Airtable" time="November 2022 - Marsh 2023" type="School project" banner="/media/elesh_visual.webp" endCTA="Discover Event" endLink="https://events-lesfousduroy.netlify.app" introText='Welcome to the "Event" application designed to simplify the planning of events in board and card game stores, you can say goodbye to paper lists and disorganization.  Event allows store managers to manage and plan their events with ease while allowing their customers to register directly via their cell phone, to register in the queue, to cancel etc...' firstVisual="/media/content/Event_MockUp.webp" scalebanner="2.3" transformbannner="40"
                 />}
               />
                <Route
