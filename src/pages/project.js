@@ -1,6 +1,7 @@
 import React from "react";
 //import {Component} from 'react'
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 import gsap from "gsap";
 import SplitType from "split-type";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -58,16 +59,20 @@ export default class Project extends React.Component {
       scrollTrigger:{
           trigger: '.Project__next__p',
           start: 'top 80%',
+          scrub: 1
       },
       opacity: 1,
     })
 
-    gsap.fromTo(".Project__next__img",{opacity: 0},{
+    gsap.fromTo(".Project__next__img",{opacity: 0, scale:0.5},{
       scrollTrigger:{
           trigger: '.Project__next__img',
           start: 'top 80%',
+          end: 'top center',
+          scrub: 1
       },
       opacity: 1,
+      scale: 1,
       duration: 1
     })
   }
@@ -97,9 +102,8 @@ export default class Project extends React.Component {
                   initial={{y: "-25vh", width: this.props.dimension.width, height: this.props.dimension.height}}
                   animate={{y: '0%', width: "100%", height: "50vh", transition: { delay: 0.2, ...transition },}}
                   className='thumbnail-single'>
-                  <motion.div className='frame-single' whileHover='hover' transition={transition}>
-                    <motion.img src={this.props.banner} alt='an image' initial={{ scale: 1.1 }}
-                      animate={{scale: this.state.scaleban, y: this.state.transformban, transition: { delay: 0.2, ...transition }}}/>
+                  <motion.div className='frame-single' transition={transition}>
+                    <motion.img whileHover={{ scale: this.state.scaleban + 0.2, transition: { delay: 0.2, ...transition } }} src={this.props.banner} alt='an image' initial={{ scale: 1.1 }} animate={{scale: this.state.scaleban, y: this.state.transformban, transition: { delay: 0.2, ...transition }}}/>
                   </motion.div>
                 </motion.div>
               </motion.div>
@@ -121,6 +125,7 @@ export default class Project extends React.Component {
           <a rel="noopener noreferrer" target="_blank" href={this.props.endLink}>
             <span>{this.props.endCTA}</span>
           </a>
+          <Link className="Project__footer__next" to={this.props.nextCTA}><span>Next Project</span></Link>
         </div>
       </motion.div>
     );
